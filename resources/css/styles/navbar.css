@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    background-color: #e1d9d90b;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: all .9s;
+    width: 100%;
+}
+
+nav div.logo img {
+    width: 80px;
+    border-radius: 10%;
+    filter: drop-shadow(0 0 10px #00ffd978);
+}
+
+nav div.logo span {
+    display: none;
+    transition: all .9s;
+}
+
+nav div.menu {
+    width: 60%;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 255, 26);
+    font-weight: bold;
+    transition: all 0.3s;
+}
+nav ul li a:hover {
+    color: #ff2a00;
+}
+
+nav.sticky {
+    background-color: rgb(1, 1, 54);
+    transition: all .9s;
+    box-shadow: 0px 3px 9px #564f4f;
+}
+
+nav.sticky ul li a {
+    color: #ff2a00;
+    transition: all .9s;
+}
+
+nav.sticky ul li a:hover {
+    color: rgb(0, 255, 26);
+}
+
+nav.sticky div.logo img {
+    display: none;
+}
+
+nav.sticky div.logo span {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ff2a00;
+    font-weight: bold;
+    transition: all .9s;
+}
+
+nav.sticky div.logo span span:first-child {
+    font-size: 2.5em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: rgb(255, 0, 0);
+}
+
+nav.sticky div.logo span span:last-child {
+    font-size: 0.8em;
+    font-weight: 800;
+    line-height: 10px;
+    color: #0037ff;
+    margin-left: -3px;
+}

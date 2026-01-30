@@ -1,0 +1,74 @@
+div.banner {
+    height: 100vh;
+    /* background: 
+        linear-gradient(to bottom, #000000d6, rgba(0, 0, 0, 0.363)),
+        center  / cover url(../../images/background.jpeg) fixed
+    ; */
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    /* padding: 0px 20px; */
+}
+
+div.banner .swiper {
+    position: relative;
+    top: 16%;
+    width: 90%;
+    height: 80%;
+}
+
+div.banner .swiper  .swiper-slide  div.pro {
+    /* background-color: rgba(127, 255, 212, 0.096); */
+    padding: 10px;
+}
+
+div.banner .swiper  .swiper-slide  div.pro h2 {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bold;
+    max-width: 53%;
+    /* text-wrap: wrap; */
+    line-height: 40px;
+}
+
+div.banner .swiper  .swiper-slide  div.pro h2+p {
+    color: rgb(158, 151, 151);
+    font-size: 2em;
+    width: 53%;
+    background-color: aqua;
+    text-transform: capitalize;
+}
+
+div.banner .swiper  .swiper-slide  div.pro p + p {
+    font-size: 1.5em;
+    color: red;
+    font-weight: 900;
+}
+
+div.banner .swiper  .swiper-slide  div.pro img {
+    position: absolute;
+    top: 15%;
+    left: 55%;
+    width: 40%;
+}
+
+div.banner .swiper  .swiper-slide  div.pro a {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-300%);
+    padding: 10px 20px;
+    background-color: #ff2a00;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+div.banner .swiper  .swiper-slide  div.banner-home p {
+    font-size: 2em;
+    font-weight: bold;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
