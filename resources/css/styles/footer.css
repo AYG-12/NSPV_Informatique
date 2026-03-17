@@ -1,0 +1,203 @@
+footer {
+    position: relative;
+    width: 100%;
+    background-color: rgb(3, 3, 47);
+    color: rgba(240, 248, 255, 0.765);
+    height: 260px;
+    padding: 10px;
+    box-shadow: -3px 0 20px rgba(0, 0, 0, 0.9);
+}
+/* 
+footer div.arrow-top {
+    border-radius: 50%;
+    border: #006aff solid 1px;
+    text-align: center;
+    width: 4%;
+    background-color: rgb(3, 3, 47);
+    margin: 0 auto;
+    margin-top: -37px;
+}
+footer div.arrow-top svg {
+    width: 50px;
+    height: 50px;
+    font-weight: 900;
+}
+footer div.arrow-top a {
+    transition: all .5s;
+}
+footer div.arrow-top a:hover {
+    color: #00ff99;
+} */
+
+footer .AYG {
+    width: 40%;
+}
+
+footer .AYG p {
+    font-size: 1.1em;
+    color: rgba(230, 230, 230, 0.66);
+    margin-top: 10px;
+    font-style: italic;
+}
+
+footer section.link h2 {
+    position: relative;
+    margin-left: -10px;
+    /* padding: 3px; */
+    font-size: 1.2em;
+    text-transform: capitalize;
+    /* color: #036;  */
+    border-left: 5px solid #ff0000; 
+    padding-left: 15px; 
+}
+
+
+footer .footer-bottom {
+    margin-top: 80px;
+    text-align: center;
+}
+
+footer section.footer-top div.legal h2,
+footer section.footer-top div.serCli h2 {
+    border-left: 5px solid #ff0000; 
+    padding-left: 15px; 
+    font-size: 1.2em;
+}
+
+footer .footer-bottom strong {
+    color: rgb(0, 51, 255);
+}
+
+footer .footer-bottom span {
+    color: rgb(255, 0, 0);
+}
+
+footer ul li {
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+footer ul li a {
+    color: rgba(230, 230, 230, 0.66);
+}
+
+footer ul li:hover a {
+    color: white;
+}
+
+footer h2 {
+    color: rgb(122, 219, 221);
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+footer h2.logo {
+    letter-spacing: 0px;
+    font-size: 1.5em;
+    color: rgb(0, 51, 255);
+    font-weight: bold;
+}
+
+footer h2.logo span {
+    font-size: 1.2em;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+footer section.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px 0px 60px;
+}
+
+footer section.footer-top div.legal {
+    position: absolute;
+    right: 40%;
+    top: 18%;
+}
+
+footer section.footer-top div.serCli {
+    position: absolute;
+    right: 20%;
+    top: 18%;
+}
+
+footer section.link {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    margin: 0;
+    width: 20%;
+    padding: 20px;
+    /* background-color: #006aff; */
+}
+footer section.link div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer section.link ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer section.link div ul {
+    width: 100%;
+}
+
+footer section.link div ul li {
+    width: 50px;
+}
+
+footer section.link div ul li a.facebook svg {
+    color: blue;
+    width: 35px;
+    transition: all .7s;
+}
+
+footer section.link div ul li a.whatsapp svg {
+    color: green;
+    width: 43px;
+    transition: all .7s;
+}
+
+
+footer section.link div ul li a.facebook svg:hover,
+footer section.link div ul li a.whatsapp svg:hover
+{
+    transform: scale(1.2);
+}
+
+/* ── RESPONSIVE : TABLETTE ≤1024px ── */
+@media (max-width: 1024px) {
+    footer { height: auto; padding: 20px; }
+    footer section.footer-top {
+        padding: 20px 20px 0;
+        flex-wrap: wrap;
+        gap: 20px;
+        position: relative;
+    }
+    footer .AYG { width: 100%; }
+    footer section.footer-top div.legal,
+    footer section.footer-top div.serCli {
+        position: static;
+        flex: 1 1 150px;
+    }
+    footer section.link {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 20px;
+    }
+    footer section.link div { align-items: flex-start; }
+    footer .footer-bottom { margin-top: 20px; }
+}
+
+/* ── RESPONSIVE : MOBILE ≤640px ── */
+@media (max-width: 640px) {
+    footer section.footer-top { flex-direction: column; gap: 16px; }
+    footer section.footer-top div.legal,
+    footer section.footer-top div.serCli { width: 100%; }
+}

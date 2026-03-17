@@ -1,7 +1,7 @@
 div.search {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 10px;
     background-color: #c4bfaf25;
@@ -14,7 +14,7 @@ div.catalogue {
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    background-color: #ffc800;
+    background-color: #ff5100;
     width: 260px;
     padding: 5px;
     color: #fff;
@@ -76,4 +76,128 @@ div.catalogue ul li {
 div.catalogue ul li:hover {
     background-color: #f5f5f5;
     color: initial;
+}
+
+/* form part */
+div.search form {
+    position: relative;
+    display: flex;
+    width: 60%;
+    margin-right: 20px;
+    height: 85%;
+    /* background-color: aqua; */
+    border: 2px solid rgb(252, 31, 6);
+    border-radius: 30px;
+}
+
+div.search form input[type="text"] {
+    position: relative;
+    width: 58%;
+    height: 100%;
+    margin-left: 8px;
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 4px;
+    font-size: 1em;
+    outline: none;
+}
+
+/* Custom Select */
+div.search form select {
+    right: 10px;
+    width: 35%;
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 1em;
+    outline: none;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-height: 100px;
+    overflow: scroll;
+}
+
+div.search form select option   :hover {
+    background-color: #eb340b;
+    color: aqua;
+}
+
+/* Don't style the empty div - it's for custom select only */
+div.search form > div:not(.custom-select) {
+    position: absolute;
+    right: 50px;
+    top: -1px;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+div.search form div::before {
+    content: '▼';
+    position: absolute;
+    top: 50%;    
+    right: 30%;
+    transform: translateY(-30%);
+    pointer-events: none;
+    color: #ff0000;
+}
+
+div.search form div::after {
+    content: '▲';
+    position: absolute;
+    top: 40%;    right: 30%;
+    transform: translateY(-60%);
+    pointer-events: none;
+    color: #ff0000;
+    z-index: 100;
+}
+
+div.search form img {
+    position: absolute;
+    color: rgb(252, 31, 6);
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+div.search form > button[type="submit"] {
+    margin-right: -2px;
+    height: 100%;
+    width: 7%;
+    border: none;
+    background-color: rgb(252, 31, 6);
+    color: #fff;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.search form > button[type="submit"] svg {
+    width: 33px;
+    height: 33px;
+    fill: #fff;
+}
+div.search form > button[type="submit"]:hover {
+    background-color: #e03b1f;
+}
+
+/* ── RESPONSIVE : TABLETTE ≤1024px ── */
+@media (max-width: 1024px) {
+    div.search { flex-wrap: wrap; height: auto; padding: 8px; gap: 8px; }
+    div.search form { width: 100%; margin-right: 0; }
+    div.catalogue { width: 180px; }
+}
+
+/* ── RESPONSIVE : MOBILE ≤640px ── */
+@media (max-width: 640px) {
+    div.search { flex-direction: column; align-items: stretch; }
+    div.catalogue { width: 100%; }
+    div.search form { width: 100%; height: 40px; }
+    div.search form input[type="text"] { width: 65%; }
 }

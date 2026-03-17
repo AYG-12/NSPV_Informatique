@@ -14,3 +14,19 @@
 @import './styles/navbar.css';
 @import './styles/search_cat.css';
 @import './styles/banner.css';
+@import './styles/produit.css';
+@import './styles/uni.css';
+@import './styles/footer.css';
+@import './styles/service.css';
+@import './styles/service_client.css';
+@import './styles/fiche_produit.css';
+@import './styles/contact.css';
+@import './styles/apropos.css';
+@import './styles/cart.css';
+@import './styles/connexion.css';
+@import './styles/favoris.css';
+
+
+body::first-letter {
+    text-transform: uppercase;
+}

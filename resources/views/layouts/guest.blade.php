@@ -1,12 +1,7 @@
-@include('partials._header')
-    <!-- Appel de la barre de navigation -->
-     @include('partials._navbar')
-
-    <!-- Appel du banner -->
-    @include('partials._banner')
-
-    <!-- Appel de la barre de recherche  -->
-     @include('partials._search')
+@include('Shop.partials._header')
     <!-- Appel du contenu principal -->
     @yield('content')
-@include('partials._footer')
+@if (Request::is('connexion'))
+@else
+    @include('Shop.partials._footer')
+@endif

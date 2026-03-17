@@ -1,0 +1,199 @@
+main.contact {
+    height: auto;
+}
+
+main.contact h1 {
+    font-weight: 900;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    color: rgb(255, 51, 0);
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+    text-shadow: 0px 4px 2px #5cc00f;
+}
+
+main.contact section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: 550px;
+}
+
+main.contact section div {
+    flex: 1;
+}
+
+main div.contact {
+    /* border: 2px solid red; */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 20px #333;
+    background-color: rgba(231, 231, 231, 0.37);
+}
+
+main div.contact h2 {
+    position: relative;
+    font-size: 1.5em;
+    color: rgb(91, 241, 191);
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+main div.contact h2::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    height: 4px;
+    width: 70px;
+    background-color: rgb(255, 128, 0);
+}
+
+main div.contact p {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+main div.contact p > span {
+    color: darkblue;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+main div.contact p > a {
+    color: rgb(0, 183, 255);
+}
+
+main div.contact p > a:hover {
+    text-decoration: underline;
+}
+
+main div.form {
+    border-radius: 9px;
+}
+
+main div.form form {
+    position: relative;
+    padding: 15px;
+    border-radius: 9px;
+    height: 100%;
+    box-shadow: 0 0 20px #333;
+}
+
+main div.form form div {
+    padding: 7px 0;
+    margin-bottom: 20px;
+}
+
+main div.form form div.email {
+    height: auto;
+}
+
+main div.form form div label span {
+    color: red;
+}
+
+main div.form form div label {
+    color: rgb(91, 241, 191);
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+main div.form form div.email input {
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    padding: 3px 9px;
+    outline-color: rgb(255, 51, 0);
+    font-size: 1.2em;
+    border: solid #5cc00f 1px;
+}
+
+main div.form form div.objet {
+    height: auto;
+}
+
+main div.form form div.objet input {
+    width: 100%;
+    height: 55px;
+    border-radius: 7px;
+    padding: 3px 9px;
+    outline-color: rgb(255, 51, 0);
+    font-size: 1.2em;
+    border: solid #5cc00f 1px;
+}
+
+main div.form form div.message  textarea {
+    max-width: 695px;
+    min-width: 695px;
+    max-height: auto;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 7px;
+    padding: 3px 9px;
+    outline-color: rgb(255, 51, 0);
+    font-size: 1.2em;
+    border: solid #5cc00f 1px;
+}
+
+main div.form form button {
+    position: absolute;
+    left: calc(60% - 120px);
+    bottom: 2%;
+    padding: 5px;
+    border-radius: 8px;
+    width: 120px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: rgb(255, 51, 0);
+    cursor: pointer;
+    color: white;
+    font-weight: 800;
+    transition: all .5s;
+}
+
+main div.form form button:hover {
+    transform: scale(1.1);
+    background-color: rgb(179, 39, 4);
+}
+
+main div.map {
+    flex: 1 1 100%;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #333;
+}
+
+main div.map iframe {
+    border-radius: 9px;
+}
+
+main.contact section.map {
+    margin-top: 50px;
+    border-radius: 9px;
+    height: 500px;
+    border: 01px solid #33333322;
+}
+
+main.contact section.map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+}
+/* ── RESPONSIVE : TABLETTE ≤1024px ── */
+@media (max-width: 1024px) {
+    main.contact section { height: auto; flex-direction: column; gap: 20px; }
+    main div.form form div.message textarea { max-width: 100%; min-width: 100%; width: 100%; }
+    main div.form form button { position: static; margin-top: 10px; width: 100%; left: auto; bottom: auto; }
+    main.contact section.map { height: 300px; }
+}
+
+/* ── RESPONSIVE : MOBILE ≤640px ── */
+@media (max-width: 640px) {
+    main.contact h1 { font-size: 1.4em; width: auto; }
+    main div.contact { padding: 20px; }
+    main div.form form { padding: 12px; }
+}

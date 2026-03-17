@@ -1,9 +1,56 @@
+/* welcome page */
+div.home_banner {
+    height: 100vh;
+    background:
+        linear-gradient(to bottom, #000000d6, rgba(58, 56, 56, 0.363)),
+        url('../../images/back.jpg') no-repeat center center/cover
+    ;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+div.home_banner .banner_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    max-width: 600px;
+}
+div.home_banner .banner_content h1 {
+    line-height: 50px;
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+div.home_banner .banner_content p {
+    font-size: 1.5em;
+    line-height: 1.4;
+}
+
+div.home_banner .banner_content a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #ff2a00;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.6s;
+}
+div.home_banner .banner_content a:hover {
+    background-color: #7a1501;
+    transition: all 0.6s;
+}
+
+/* Shop page */
 div.banner {
     height: 100vh;
-    /* background: 
-        linear-gradient(to bottom, #000000d6, rgba(0, 0, 0, 0.363)),
-        center  / cover url(../../images/background.jpeg) fixed
-    ; */
+    background: 
+        linear-gradient(to bottom, #292a28d6, rgba(161, 156, 156, 0.363))
+    ;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
     /* padding: 0px 20px; */
@@ -22,7 +69,10 @@ div.banner .swiper  .swiper-slide  div.pro {
 }
 
 div.banner .swiper  .swiper-slide  div.pro h2 {
-    font-size: 2.5em;
+    position: absolute;
+    top: 7%;
+    color: #ffefef;
+    font-size: 2.2em;
     text-align: center;
     font-weight: bold;
     max-width: 53%;
@@ -31,17 +81,26 @@ div.banner .swiper  .swiper-slide  div.pro h2 {
 }
 
 div.banner .swiper  .swiper-slide  div.pro h2+p {
-    color: rgb(158, 151, 151);
-    font-size: 2em;
+    position: absolute;
+    top: 22%;   
+    color: rgba(255, 254, 254, 0.637);
+    font-size: 1.3em;
     width: 53%;
-    background-color: aqua;
     text-transform: capitalize;
 }
 
 div.banner .swiper  .swiper-slide  div.pro p + p {
+    position: absolute;
+    top: 55%;
+    left: 5%;
     font-size: 1.5em;
     color: red;
     font-weight: 900;
+}
+
+div.banner .swiper  .swiper-slide  div.pro p + p span {
+    color: green;
+    font-size: 1.8em;
 }
 
 div.banner .swiper  .swiper-slide  div.pro img {
@@ -53,8 +112,8 @@ div.banner .swiper  .swiper-slide  div.pro img {
 
 div.banner .swiper  .swiper-slide  div.pro a {
     position: absolute;
-    bottom: 10%;
-    left: 50%;
+    bottom: 18%;
+    left: 40%;
     transform: translateX(-300%);
     padding: 10px 20px;
     background-color: #ff2a00;
@@ -62,13 +121,192 @@ div.banner .swiper  .swiper-slide  div.pro a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: all 0.6s;
 }
 
+div.banner .swiper  .swiper-slide  div.pro a:hover {
+    background-color: #7a1501;
+    transition: all 0.6s;
+}
+
+/* banner - home */
 div.banner .swiper  .swiper-slide  div.banner-home p {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     width: 50%;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #ffffff;
+    position: absolute;
+    top: 22%;
+}
+
+div.banner .swiper  .swiper-slide  div.banner-home img {
+    position: absolute;
+    left: 80%;
+    transform: translateX(-50%);
+    top: 17%;
+    height: auto;
+    width: 30%;
+    border-radius: 10%;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+div.banner .swiper  .swiper-slide  div.banner-home a {
+    position: absolute;
+    bottom: 40%;
+    left: 55%;
+    transform: translateX(-300%);
+    padding: 10px 20px;
+    background-color: #ff2a00;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.6s;
+}
+
+div.banner .swiper  .swiper-slide  div.banner-home a:hover {
+    background-color: #7a1501;
+    transition: all 0.6s;
+}
+
+/* Swiper pagination styles */
+div.banner .swiper .swiper-pagination-bullet {
+    background-color: #ff2a00a6;
+    opacity: 1;
+}
+div.banner .swiper .swiper-pagination-bullet-active {
+    background-color: #00ff26;
+}
+
+/* Apparitions pour .pro (avec variantes) */
+    .pro [class^="anim-"], .pro [class*=" anim-"] {
+        opacity: 0;
+        transform-origin: center;
+        transition: transform 0.9s cubic-bezier(.2,.9,.2,1), opacity 0.9s ease;
+    }
+
+    /* basic movements */
+    .anim-left { transform: translateX(-24px); }
+    .anim-right { transform: translateX(24px); }
+    .anim-up { transform: translateY(20px); }
+
+    /* variant-specific fancy effects */
+    .anim-rotate { transform: rotate(-8deg) translateY(6px) scale(.98); }
+    .anim-fade-scale { transform: scale(.92); opacity: 0; }
+    .anim-bounce { transform: translateY(28px); }
+    .anim-zoom { transform: scale(.85); }
+    .anim-tilt { transform: rotate(6deg) translateX(-8px); }
+
+    /* when in-view: normalise transforms and reveal */
+    .pro.in-view .anim-left,
+    .pro.in-view .anim-right,
+    .pro.in-view .anim-up,
+    .pro.in-view .anim-rotate,
+    .pro.in-view .anim-fade-scale,
+    .pro.in-view .anim-bounce,
+    .pro.in-view .anim-zoom,
+    .pro.in-view .anim-tilt {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Variantes visuelles distinctes */
+    .pro.variant-1 { --accent: 59,130,246; }
+    .pro.variant-2 { --accent: 16,185,129; }
+    .pro.variant-3 { --accent: 139,92,246; }
+
+    /* highlight color per variant */
+    .pro.variant-1.highlight { box-shadow: 0 12px 30px rgba(var(--accent),0.12), 0 6px 12px rgba(var(--accent),0.06) inset; }
+    .pro.variant-2.highlight { box-shadow: 0 12px 30px rgba(var(--accent),0.12), 0 6px 12px rgba(var(--accent),0.06) inset; }
+    .pro.variant-3.highlight { box-shadow: 0 12px 30px rgba(var(--accent),0.12), 0 6px 12px rgba(var(--accent),0.06) inset; }
+
+    /* subtle price effects: animate ONLY when parent .pro is in-view */
+    .pro span.price-blink { display: inline-block; opacity: 1; transition: transform 0.35s ease, color 0.35s ease; }
+
+    /* price blink (variant-1): soft opacity pulse */
+    @keyframes priceBlink { 0% { opacity: 1; } 50% { opacity: 0.72; } 100% { opacity: 1; } }
+
+    /* price scale pulse (variant-2) */
+    @keyframes priceScalePulse { 0% { transform: scale(1); } 50% { transform: scale(1.06); } 100% { transform: scale(1); } }
+
+    /* price color shift (variant-3) */
+    @keyframes priceColorShift { 0% { filter: hue-rotate(0deg); } 50% { filter: hue-rotate(8deg) saturate(1.05); } 100% { filter: hue-rotate(0deg); } }
+
+    /* apply variant-specific animations only when .pro is visible */
+    .pro.in-view span.price-blink.price-variant-1 { animation: priceBlink 1.4s ease-in-out infinite; }
+    .pro.in-view span.price-blink.price-variant-2 { animation: priceScalePulse 1.6s ease-in-out infinite; }
+    .pro.in-view span.price-blink.price-variant-3 { animation: priceColorShift 1.6s ease-in-out infinite; }
+
+    .pro span.price-variant-1 { color: rgb(59,130,246); }
+    .pro span.price-variant-2 { color: rgb(16,185,129); transform-origin: center; display: inline-block; }
+    .pro span.price-variant-3 { color: rgb(139,92,246); text-shadow: 0 2px 6px rgba(139,92,246,0.12); display: inline-block; }
+
+    /* additional small effect per variant when in view */
+    .pro.variant-2.in-view span.price-variant-2 { transform: scale(1.04); }
+    .pro.variant-3.in-view span.price-variant-3 { transform: translateY(-3px); }
+
+/* <!-- Highlight effect: glow + pulse when .pro becomes visible --> */
+    .pro.highlight {
+        box-shadow: 0 12px 30px rgba(59,130,246,0.12), 0 6px 12px rgba(59,130,246,0.06) inset;
+        border-radius: 8px;
+        transform: translateY(-3px);
+        transition: box-shadow 0.45s ease, transform 0.45s ease;
+    }
+    @keyframes highlightPulse {
+        0% { box-shadow: 0 6px 18px rgba(59,130,246,0.06); }
+        50% { box-shadow: 0 18px 44px rgba(59,130,246,0.18); }
+        100% { box-shadow: 0 6px 18px rgba(59,130,246,0.06); }
+    }
+    .pro.highlight.pulse { animation: highlightPulse 1.6s ease-in-out 1; }
+/* ── RESPONSIVE : TABLETTE ≤1024px ── */
+@media (max-width: 1024px) {
+    div.home_banner .banner_content { max-width: 90%; padding: 0 20px; }
+    div.home_banner .banner_content h1 { font-size: 2.2em; }
+    div.home_banner .banner_content p { font-size: 1.2em; }
+
+    div.banner .swiper .swiper-slide div.pro h2 { font-size: 1.7em; max-width: 70%; }
+    div.banner .swiper .swiper-slide div.pro h2+p { font-size: 1.1em; width: 70%; }
+    div.banner .swiper .swiper-slide div.pro img { width: 35%; left: 62%; }
+}
+
+/* ── RESPONSIVE : MOBILE ≤768px ── */
+@media (max-width: 768px) {
+    div.home_banner .banner_content h1 { font-size: 1.8em; line-height: 1.3; }
+    div.home_banner .banner_content p { font-size: 1em; }
+
+    div.banner .swiper { top: 10%; width: 95%; height: 85%; }
+
+    div.banner .swiper .swiper-slide div.pro h2 {
+        font-size: 1.3em; max-width: 90%; top: 5%;
+    }
+    div.banner .swiper .swiper-slide div.pro h2+p {
+        font-size: 0.95em; width: 90%; top: 22%;
+    }
+    div.banner .swiper .swiper-slide div.pro img {
+        width: 55%; left: 50%; top: 40%;
+        transform: translateX(-50%);
+    }
+    div.banner .swiper .swiper-slide div.pro p + p { top: 32%; font-size: 1.2em; }
+    div.banner .swiper .swiper-slide div.pro a {
+        bottom: 8%; left: 50%;
+        transform: translateX(-50%);
+    }
+
+    div.banner .swiper .swiper-slide div.banner-home p { width: 90%; top: 5%; font-size: 1.1em; }
+    div.banner .swiper .swiper-slide div.banner-home img {
+        width: 55%; left: 50%; top: 38%;
+        transform: translateX(-50%);
+    }
+    div.banner .swiper .swiper-slide div.banner-home a {
+        bottom: 10%; left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* ── RESPONSIVE : MOBILE ≤480px ── */
+@media (max-width: 480px) {
+    div.home_banner .banner_content h1 { font-size: 1.4em; }
+    div.banner .swiper .swiper-slide div.pro h2 { font-size: 1.1em; }
 }

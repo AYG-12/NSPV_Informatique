@@ -1,0 +1,109 @@
+main.content-favoris {
+    padding: 80px;
+}
+
+main.content-favoris .favoris {
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+main.content-favoris .favoris .pro_favoris {
+    position: relative;
+    display: flex;
+    background-color: #7a787839;
+    border-radius: 10px;
+    padding: 20px; 
+    width: 48%;
+}
+
+main.content-favoris .favoris .pro_favoris .cont_favoris {
+    display: flex;
+    gap: 10px;
+}
+
+main.content-favoris .favoris .pro_favoris .favoris_pro_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+main.content-favoris .favoris .pro_favoris .favoris_pro_img img {
+    object-fit: cover;
+    background-color: #ff1616;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+main.content-favoris .favoris .pro_favoris .favoris_pro_info h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: blue;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+main.content-favoris .favoris .pro_favoris .favoris_pro_info p {
+    font-weight: 600;
+    color: rgb(123, 124, 117);
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+main.content-favoris .favoris .pro_favoris .act_favoris {
+    position: absolute;
+    right: 3%;
+    bottom: 6%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+main.content-favoris .favoris .pro_favoris .act_favoris .fav_btn_sup {
+    color: white;
+    background-color: #ff161664;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+main.content-favoris .favoris .pro_favoris .act_favoris .fav_btn_sup:hover {
+    background-color: #bc0505d3;
+}
+
+main.content-favoris .favoris .pro_favoris .act_favoris .fav_btn_ajou {
+    color: white;
+    background-color: #16ff1664;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+main.content-favoris .favoris .pro_favoris .act_favoris .fav_btn_ajou:hover {
+    background-color: #09b609be;
+}
+/* ── RESPONSIVE : TABLETTE ≤1024px ── */
+@media (max-width: 1024px) {
+    main.content-favoris { padding: 100px 30px 30px; }
+    main.content-favoris .favoris .pro_favoris { width: 100%; }
+}
+
+/* ── RESPONSIVE : MOBILE ≤640px ── */
+@media (max-width: 640px) {
+    main.content-favoris { padding: 90px 12px 20px; }
+    main.content-favoris .favoris .pro_favoris .act_favoris {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+        justify-content: flex-end;
+    }
+    main.content-favoris .favoris .pro_favoris { flex-direction: column; }
+}

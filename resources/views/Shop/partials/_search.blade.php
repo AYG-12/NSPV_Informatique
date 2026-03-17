@@ -1,3 +1,4 @@
+
 <div class="search">
     <div class="catalogue">
         
@@ -40,20 +41,25 @@
         </ul>
     </div>
         
-    <form action="" method="post">
-        <input type="text" name="" id="">
+    <form action="#" >
+        <input type="text" name="text" id="text-input" placeholder="Rechercher un produit, une marque...">
+        <div></div>
         <select name="" id="">
-            <option value="0">Test0</option>
-            <option value="1">Test1</option>
-            <option value="2">Test2</option>
-            <option value="3">Test3</option>
+            <option value="0">Toutes les Catégories</option>
+            <optgroup label="Catégorie 1">
+                <option value="1">Cat1</option>
+                <option value="2">Cat2</option>
+            </optgroup>
+            <optgroup label="Catégorie 2">
+                <option value="3">Cat3</option>
+                <option value="4">Cat4</option>
+            </optgroup>
         </select>
-
         <button type="submit">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168Z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
             </svg>
         </button>
-    </form>
+    </form> 
 
 </div>

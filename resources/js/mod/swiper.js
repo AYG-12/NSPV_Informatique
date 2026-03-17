@@ -7,6 +7,6 @@ navigation: {
     prevEl: '.swiper-button-prev',
 },
 autoplay: {
-    delay: 3000,
+    delay: 9000,
 },
 });

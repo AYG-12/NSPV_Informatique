@@ -1,0 +1,10 @@
+main.apropos h1 {
+    font-weight: 900;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    color: rgb(255, 51, 0);
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+    text-shadow: 0px 4px 2px #5cc00f;
+}
