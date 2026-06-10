@@ -49,7 +49,8 @@ div.home_banner .banner_content a:hover {
 div.banner {
     height: 100vh;
     background: 
-        linear-gradient(to bottom, #292a28d6, rgba(161, 156, 156, 0.363))
+        linear-gradient(to bottom, #292a28, rgba(161, 156, 156, 0.935)),
+        url('../../images/background.jpeg') no-repeat center center/cover
     ;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
@@ -64,69 +65,82 @@ div.banner .swiper {
 }
 
 div.banner .swiper  .swiper-slide  div.pro {
-    /* background-color: rgba(127, 255, 212, 0.096); */
+    position: relative;
+    background-color: rgba(127, 255, 212, 0.049);
     padding: 10px;
+}
+div.banner .swiper  .swiper-slide  div.pro div.info_prod {
+    position: absolute;
+    top: 5%;
+    width: 58%;
+    height: 90%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    /* background-color: #00ff2620; */
 }
 
 div.banner .swiper  .swiper-slide  div.pro h2 {
-    position: absolute;
-    top: 7%;
     color: #ffefef;
     font-size: 2.2em;
-    text-align: center;
     font-weight: bold;
-    max-width: 53%;
-    /* text-wrap: wrap; */
-    line-height: 40px;
 }
 
 div.banner .swiper  .swiper-slide  div.pro h2+p {
-    position: absolute;
-    top: 22%;   
+    /* position: absolute;
+    top: 37%;   
+    left: 5%; */
     color: rgba(255, 254, 254, 0.637);
     font-size: 1.3em;
-    width: 53%;
+    /* width: 53%; */
     text-transform: capitalize;
 }
 
 div.banner .swiper  .swiper-slide  div.pro p + p {
-    position: absolute;
-    top: 55%;
-    left: 5%;
+    /* position: absolute;
+    top: 45%;
+    left: 5%; */
     font-size: 1.5em;
-    color: red;
+    color: rgb(0, 0, 0);
     font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 div.banner .swiper  .swiper-slide  div.pro p + p span {
-    color: green;
+    color: rgb(0, 73, 128);
     font-size: 1.8em;
 }
 
 div.banner .swiper  .swiper-slide  div.pro img {
     position: absolute;
     top: 15%;
-    left: 55%;
-    width: 40%;
+    right: 6%;
+    width: 35%;
+    height: 70%;
+    border-radius: 10px;
 }
 
-div.banner .swiper  .swiper-slide  div.pro a {
-    position: absolute;
-    bottom: 18%;
-    left: 40%;
-    transform: translateX(-300%);
+div.banner .swiper  .swiper-slide  div.pro .bann-ajout {
+    /* position: absolute;
+    bottom: 25%;
+    left: 40%; 
+    transform: translateX(-200%); */
     padding: 10px 20px;
     background-color: #ff2a00;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: all 0.6s;
 }
 
-div.banner .swiper  .swiper-slide  div.pro a:hover {
-    background-color: #7a1501;
-    transition: all 0.6s;
+div.banner .swiper  .swiper-slide  div.pro .bann-ajout:hover {
+    cursor: pointer;
 }
 
 /* banner - home */
@@ -169,6 +183,62 @@ div.banner .swiper  .swiper-slide  div.banner-home a {
 div.banner .swiper  .swiper-slide  div.banner-home a:hover {
     background-color: #7a1501;
     transition: all 0.6s;
+}
+
+div.info {
+    position: relative;
+    background-color: #0000007d;
+    height: 4%;
+    width: 95%;
+    align-content: center;
+    border-radius: 5px;
+    transform: translate(3%, 137px);
+    /* margin: 0 auto; */
+}
+div.info span {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    background-color: rgb(65, 210, 196);
+    color: orangered;
+    height: 100%;
+    width: 4%;
+    text-align: center;
+    align-content: center;
+    font-size: 120%;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 5px 1px 1px 5px;
+    z-index: 10;
+}
+div.info marquee {
+    align-content: center;
+    height: 100%;
+    color: white;
+    /* font-size: ; */
+}
+
+div.info marquee m {
+    color: rgb(255, 255, 0);
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+div.info marquee b {
+    font-style: italic;
+}
+
+div.info marquee i {
+    color: rgb(0, 255, 26);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+div.info marquee strong {
+    color: rgb(255, 0, 0);
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
 }
 
 /* Swiper pagination styles */
@@ -236,7 +306,7 @@ div.banner .swiper .swiper-pagination-bullet-active {
 
     /* apply variant-specific animations only when .pro is visible */
     .pro.in-view span.price-blink.price-variant-1 { animation: priceBlink 1.4s ease-in-out infinite; }
-    .pro.in-view span.price-blink.price-variant-2 { animation: priceScalePulse 1.6s ease-in-out infinite; }
+    .pro.in-view span.price-blink.price-variant-2,div.info span { animation: priceScalePulse 1.6s ease-in-out infinite; }
     .pro.in-view span.price-blink.price-variant-3 { animation: priceColorShift 1.6s ease-in-out infinite; }
 
     .pro span.price-variant-1 { color: rgb(59,130,246); }
@@ -260,6 +330,8 @@ div.banner .swiper .swiper-pagination-bullet-active {
         100% { box-shadow: 0 6px 18px rgba(59,130,246,0.06); }
     }
     .pro.highlight.pulse { animation: highlightPulse 1.6s ease-in-out 1; }
+
+
 /* ── RESPONSIVE : TABLETTE ≤1024px ── */
 @media (max-width: 1024px) {
     div.home_banner .banner_content { max-width: 90%; padding: 0 20px; }
@@ -273,7 +345,7 @@ div.banner .swiper .swiper-pagination-bullet-active {
 
 /* ── RESPONSIVE : MOBILE ≤768px ── */
 @media (max-width: 768px) {
-    div.home_banner .banner_content h1 { font-size: 1.8em; line-height: 1.3; }
+    div.home_banner .banner_content h1 { font-size: 1em; line-height: 1.3; }
     div.home_banner .banner_content p { font-size: 1em; }
 
     div.banner .swiper { top: 10%; width: 95%; height: 85%; }
@@ -307,6 +379,8 @@ div.banner .swiper .swiper-pagination-bullet-active {
 
 /* ── RESPONSIVE : MOBILE ≤480px ── */
 @media (max-width: 480px) {
-    div.home_banner .banner_content h1 { font-size: 1.4em; }
-    div.banner .swiper .swiper-slide div.pro h2 { font-size: 1.1em; }
+    div.home_banner .banner_content h1 { font-size: 1em; }
+    div.banner .swiper .swiper-slide div.pro h2 { font-size: 0.8em; }
+
+    
 }

@@ -69,9 +69,10 @@ div.produits div.pro-grid div.pro div.prod_info a.btn {
 div.prod_grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 25px;
     width: 65%;
     margin: 2px auto;
+    padding: 0px 60px;
     justify-content: center;
 }
 
@@ -83,7 +84,7 @@ div.prod {
     flex-direction: column;
     align-items: center;
     width: 40%;
-    height: 350px;
+    height: 390px;
     border-radius: 8px;
     flex: 1 1 240px;
     transition: all 1s;
@@ -91,8 +92,8 @@ div.prod {
 }
 
 div.prod .img_prod {
-    display: flex;
-    gap: 4px;
+    /* display: flex;
+    gap: 4px; */
     width: 100%;
     height: 50%;
     overflow: hidden;
@@ -198,6 +199,7 @@ div.prod .prod_info p {
 }
 
 div.prod .prod_info .star_price {
+    position: relative;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -221,16 +223,11 @@ div.prod .prod_info .star_price .prix_prod h4 {
 div.prod .prod_info .star_price .star {
     display: flex;
     justify-content: center;
-    width: 30%;
     margin-right: 7px;
 }
 
-div.prod .prod_info .star_price .star svg {
-    width: 15px;
-    color: rgb(255, 234, 0);
-}
-
-div.prod .prod_info a.btn {
+div.prod .prod_info a.btn,
+div.prod .prod_info .btn_ajout {
     position: absolute;
     left: 35%;
     bottom: 9px;
@@ -239,30 +236,66 @@ div.prod .prod_info a.btn {
     font-size: small;
 }
 
+div.prod .prod_info a.btn:hover,
+div.prod .prod_info .btn_ajout:hover {
+    cursor: pointer;
+}
+
 div.prod_grid div.prod:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgb(255, 64, 0);
 }
 
-div.prod .prod_info a.btn_favoris {
+div.info_fiche_produit {
+    position: relative;
+}
+
+div.info_fiche_produit button.btn_favoris {
+    color: rgb(255, 0, 0);
+    padding: 8px;
+    border-radius: 4px;
+    transition: all .5s;
+    width: 37px;
+    border-radius: 40px;
+    transition: all .5s;
+}
+
+div.prod .prod_info a.btn_favoris,
+div.prod .prod_info button.btn_favoris {
     position: absolute;
-    background-color: rgb(255, 0, 68);
-    color: white;
+    /* background-color: rgb(0, 110, 255); */
+    color: rgb(255, 0, 0);
     right: 10px;
     bottom: 12px;
     padding: 8px;
     border-radius: 4px;
     transition: all .5s;
+    width: 35px;
+    border-radius: 40px;
+    transition: all .5s;
 }
 
-div.prod .prod_info a.btn_favoris:hover {
-    background-color: rgb(255, 0, 68);
-    color: white;
+div.info_fiche_produit button.btn_favoris:hover {
+    background-color: rgba(0, 106, 255, 0.37);
+    color: rgb(255, 0, 0);
+    /* right: 10px; */
+    /* bottom: 12px; */
+    padding: 8px;
+    border-radius: 4px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+div.prod .prod_info a.btn_favoris:hover,
+div.prod .prod_info button.btn_favoris:hover {
+    background-color: rgba(0, 106, 255, 0.37);
+    color: rgb(255, 0, 0);
     right: 10px;
     bottom: 12px;
     padding: 8px;
     border-radius: 4px;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 div.prod .prod_info a.btn_favoris svg {

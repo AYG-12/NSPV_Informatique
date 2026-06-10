@@ -1,9 +1,27 @@
 main.content-favoris {
-    padding: 80px;
+    padding: 90px;
+    min-height: 90vh;
+}
+
+main.content-favoris h2.title {
+    position: relative;
+    color: #ff1616;
+    font-weight: 800;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+main.content-favoris h2.title::before {
+    content: '';
+    background-color: #ff1616;
+    width: 50%;
+    height: 3px;
+    position: absolute;
+    bottom: -3px;
 }
 
 main.content-favoris .favoris {
-    margin-top: 40px;
+    margin-top: 10px;
     width: 100%;
     padding: 10px;
     display: flex;
@@ -57,12 +75,12 @@ main.content-favoris .favoris .pro_favoris .favoris_pro_info p {
 
 main.content-favoris .favoris .pro_favoris .act_favoris {
     position: absolute;
-    right: 3%;
+    right: 0%;
     bottom: 6%;
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 main.content-favoris .favoris .pro_favoris .act_favoris .fav_btn_sup {
@@ -90,6 +108,12 @@ main.content-favoris .favoris .pro_favoris .act_favoris .fav_btn_ajou {
 main.content-favoris .favoris .pro_favoris .act_favoris .fav_btn_ajou:hover {
     background-color: #09b609be;
 }
+
+main.content-favoris .favoris .fav_vide {
+    margin: 0px auto;
+}
+
+
 /* ── RESPONSIVE : TABLETTE ≤1024px ── */
 @media (max-width: 1024px) {
     main.content-favoris { padding: 100px 30px 30px; }

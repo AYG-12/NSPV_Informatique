@@ -151,6 +151,29 @@ body { font-family:'DM Sans',sans-serif; /*background:var(--bg);*/ color:var(--t
 
 .user-role { font-size:11px;color:var(--muted); }
 
+.btn-deconnecter { 
+  color:#fff;
+  font-weight: bold;
+  display:flex;
+  align-items:center; 
+  justify-content:center; 
+  gap:8px; 
+  background:rgba(21, 102, 243, 0.097); 
+  border: 2px solid #59a0fc9e; 
+  font-size:14px; 
+  cursor:pointer; 
+  width:100%; 
+  padding:8px 0; 
+  border-radius:6px; 
+  transition:all 0.5s;
+}
+
+.btn-deconnecter:hover {
+  background:rgba(27, 108, 249, 0.264);
+  border-color:#59a0fc;
+  color: red;
+}
+
 /* ── MAIN ── */
 .main { margin-left:240px; flex:1; min-height:100vh; display:flex; flex-direction:column; }
 
@@ -251,7 +274,7 @@ tr:last-child td{border-bottom:none}
 
 tr:hover td{background:rgba(255,255,255,.015)}
 .product-cell{display:flex;align-items:center;gap:10px}
-.product-thumb{width:36px;height:36px;border-radius:8px;background:var(--surface2);border:1px solid var(--border);display:grid;place-items:center;font-size:16px;flex-shrink:0}
+.product-thumb{width:28px;height:28px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);display:grid;place-items:center;font-size:12px;flex-shrink:0}
 .product-name{font-weight:500;font-size:13px}
 .product-sku{font-size:11px;color:var(--muted)}
 
@@ -512,3 +535,83 @@ textarea.form-input{resize:vertical;min-height:90px}
   .drop-price { color: var(--accent); font-size: 11px; font-weight: 700; font-family: 'Syne', sans-serif; }
   .product-drop-no-result { padding: 12px 14px; font-size: 13px; color: var(--muted); text-align: center; }
   .product-drop-item.selected-dim { opacity: .4; pointer-events: none; }
+
+/* ── TOPBAR : MENU ADMIN ── */
+.admin-user-menu {
+  position: relative;
+  cursor: pointer;
+}
+.admin-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  min-width: 210px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5);
+  z-index: 999;
+  overflow: hidden;
+}
+.admin-user-menu:hover .admin-dropdown { display: block; }
+.admin-dropdown-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.admin-dropdown-header strong {
+  font-size: 13px;
+  color: var(--text);
+}
+.admin-dropdown-header span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.admin-dropdown a,
+.admin-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  border-bottom: 1px solid var(--border);
+  transition: background .15s;
+}
+.admin-dropdown a:last-of-type { border-bottom: none; }
+.admin-dropdown a:hover,
+.admin-dropdown button:hover { background: var(--border); }
+.admin-dropdown button {
+  color: var(--danger);
+  border-bottom: none;
+}
+
+/* ── SIDEBAR : BOUTON DÉCONNEXION ── */
+.sidebar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(255,71,87,.08);
+  border: 1px solid rgba(255,71,87,.2);
+  border-radius: 8px;
+  color: var(--danger);
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+.sidebar-logout-btn:hover {
+  background: rgba(255,71,87,.18);
+  border-color: var(--danger);
+}

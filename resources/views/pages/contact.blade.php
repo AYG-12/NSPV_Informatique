@@ -8,9 +8,15 @@
     <section>
         <div class="contact">
             <h2>Contact</h2>
-            <p><span>Adresse :</span> Abobo kp18, Abidjan, Côte d'Ivoire</p>
-            <p><span>Téléphone :</span> +225 07 57 97 88 83</p>
-            <p><span>Email :</span> <a href="mailto:contact@aygpro.com">contact@aygpro.com</a></p>
+            @if(!empty($appSettings['shop_address']))
+            <p><span>Adresse :</span> {{ $appSettings['shop_address'] }}</p>
+            @endif
+            @if(!empty($appSettings['shop_phone']))
+            <p><span>Téléphone :</span> {{ $appSettings['shop_phone'] }}</p>
+            @endif
+            @if(!empty($appSettings['shop_email']))
+            <p><span>Email :</span> <a href="mailto:{{ $appSettings['shop_email'] }}">{{ $appSettings['shop_email'] }}</a></p>
+            @endif
         </div>
     
         <div class="form">

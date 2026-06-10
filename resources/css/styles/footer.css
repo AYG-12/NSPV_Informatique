@@ -3,7 +3,7 @@ footer {
     width: 100%;
     background-color: rgb(3, 3, 47);
     color: rgba(240, 248, 255, 0.765);
-    height: 260px;
+    height: auto;
     padding: 10px;
     box-shadow: -3px 0 20px rgba(0, 0, 0, 0.9);
 }

@@ -9,8 +9,8 @@
     <!-- Part Banner -->
      <div class=" home_banner">
         <div class="banner_content">
-            <h1>Bienvenue chez NSPV Informatique</h1>
-            <p>Votre partenaire de confiance pour la vente d'ordinateurs et de services informatiques.</p>
+            <h1>Bienvenue chez {{ $appSettings['shop_name'] ?? 'NSPV Informatique' }}</h1>
+            <p>{{ $appSettings['shop_description'] ?? 'Votre partenaire de confiance pour la vente d\'ordinateurs et de services informatiques.' }}</p>
             <a href="{{ url('/Shop') }}" class="bt">Accéder à la boutique</a>
         </div>
      </div>

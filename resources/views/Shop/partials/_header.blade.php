@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="NSPV Informatique est votre partenaire de confiance pour la vente d'ordinateurs et de services informatiques. Découvrez nos produits et services de qualité supérieure.">
-    <meta name="keywords" content="NSPV Informatique, vente d'ordinateurs, services informatiques, produits informatiques, maintenance informatique, support technique, solutions informatiques">
+    <meta name="description" content="{{ $appSettings['shop_description'] ?? 'NSPV Informatique est votre partenaire de confiance pour la vente d\'ordinateurs et de services informatiques.' }}">
+    <meta name="keywords" content="{{ ($appSettings['shop_name'] ?? 'NSPV Informatique') }}, vente d'ordinateurs, services informatiques, produits informatiques">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {{$title}} | NSPV Informatique</title>
+    <title>{{ $title }} | {{ $appSettings['shop_name'] ?? 'NSPV Informatique' }}</title>
 
     <!-- style -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])

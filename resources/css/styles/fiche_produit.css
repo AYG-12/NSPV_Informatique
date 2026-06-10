@@ -102,10 +102,6 @@ main.content-main .container .info_fiche_produit .bt:hover { background-color: r
 
 main.content-main .container .info_fiche_produit .bt:active {scale: calc(1.01);}
 
-main.content-main .container .info_fiche_produit .descrip {
-    
-}
-
 main.content-main .container .info_fiche_produit .descrip h2 { 
     position: relative; 
     font-weight: bold; 
